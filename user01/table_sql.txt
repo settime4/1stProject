@@ -1,0 +1,35 @@
+create table vocabularies(
+	wletter varchar2(45),
+	rletter varchar2(45) not null,
+	wordclass varchar2(12) not null,
+	meaning varchar2(90) not null,
+	mdate date not null,
+	scount number default 0,
+	rcount	number	default 0,
+	wcount	number	default 0,
+  CONSTRAINT ck primary key (rletter, meaning)
+);
+
+insert into vocabularies( wletter, rletter, wordclass, meaning, mdate, searchcount , rightcount, wrongcount) 
+values( '愛想', 'あいそう', '명사', '→あいそ', '2016/05/24', default, default, default  );
+
+insert into vocabularies( wletter, rletter, wordclass, meaning, mdate, scount , rcount, wcount) 
+values( '間柄', 'あいだがら', '명사', '사람과 사람의 사이;간, 혈족·친척간...', '2016/05/25', 4, 2, 3  );
+
+insert into vocabularies( wletter, rletter, wordclass, meaning, mdate, searchcount , rightcount, wrongcount) 
+values( '合間', 'あいま', '명사', '틈;짬;참참', '2016/05/26', 2, 3, 1  );
+
+insert into vocabularies( wletter, rletter, wordclass, meaning, mdate, searchcount , rightcount, wrongcount) 
+values( '敢えて', 'あえて', '부사', '감히;굳이, 구태여;그다지', '2016/05/24', 1, 1, 2  );
+
+insert into vocabularies( wletter, rletter, wordclass, meaning, mdate, searchcount , rightcount, wrongcount) 
+values( '仰ぐ', 'あおぐ', '동사', '우러러보다, 치켜들다, 위를 보다', '2016/05/24', 1, 2, 3  );
+
+insert into vocabularies( wletter, rletter, wordclass, meaning, mdate, searchcount , rightcount, wrongcount) 
+values( '垢', 'あか', '명사', '때;더러움, 물때, 강바닥의 돌에 붙', '2016/05/24', 5, 1, 0  );
+
+insert into vocabularies( wletter, rletter, wordclass, meaning, mdate, searchcount , rightcount, wrongcount) 
+values( '明(か)す', 'あかす', '동사', '밝히다, 털어놓다;명백히 하다, 증명', '2016/05/24', 3, 2, default  );
+
+insert into vocabularies( wletter, rletter, wordclass, meaning, mdate, searchcount , rightcount, wrongcount) 
+values( '赤らむ', 'あからむ', '동사', '불그스름해지다;붉어지다;홍조를 띠다', '2016/05/24', 2, 0, 1  );
